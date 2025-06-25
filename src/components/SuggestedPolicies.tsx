@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -19,14 +18,21 @@ const SuggestedPolicies: React.FC<SuggestedPoliciesProps> = ({ suggestions }) =>
         return 'bg-green-100 text-green-800';
       case 'allowance':
         return 'bg-purple-100 text-purple-800';
+      case 'government scheme':
+        return 'bg-orange-100 text-orange-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
   };
 
-  const handleLearnMore = (suggestionId: string) => {
-    // This would typically navigate to a detailed page or open a modal
-    console.log(`Opening detailed information for suggestion: ${suggestionId}`);
+  const handleLearnMore = (suggestion: PolicySuggestion) => {
+    if (suggestion.officialLink) {
+      window.open(suggestion.officialLink, '_blank', 'noopener,noreferrer');
+    } else {
+      // Fallback if no official link is provided
+      console.log(`Opening detailed information for suggestion: ${suggestion.id}`);
+      alert('Official link not available for this scheme. Please search online for more details.');
+    }
   };
 
   if (suggestions.length === 0) {
@@ -80,7 +86,7 @@ const SuggestedPolicies: React.FC<SuggestedPoliciesProps> = ({ suggestions }) =>
               <Button 
                 variant="outline" 
                 size="sm" 
-                onClick={() => handleLearnMore(suggestion.id)}
+                onClick={() => handleLearnMore(suggestion)}
                 className="flex-1"
               >
                 <BookOpen className="h-3 w-3 mr-1" />
@@ -90,7 +96,7 @@ const SuggestedPolicies: React.FC<SuggestedPoliciesProps> = ({ suggestions }) =>
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  onClick={() => window.open(suggestion.officialLink, '_blank')}
+                  onClick={() => window.open(suggestion.officialLink, '_blank', 'noopener,noreferrer')}
                 >
                   <ExternalLink className="h-3 w-3" />
                 </Button>

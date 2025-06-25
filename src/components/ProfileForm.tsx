@@ -195,6 +195,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({ onSubmit, isLoading }) => {
                   {...register('investments.ppf', { valueAsNumber: true })}
                   placeholder="e.g., 150000"
                 />
+                <p className="text-xs text-gray-500 mt-1">15-year investment scheme with tax benefits on contribution, interest, and withdrawal</p>
               </div>
               <div>
                 <Label htmlFor="elss">
@@ -209,6 +210,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({ onSubmit, isLoading }) => {
                   {...register('investments.elss', { valueAsNumber: true })}
                   placeholder="e.g., 50000"
                 />
+                <p className="text-xs text-gray-500 mt-1">Equity mutual funds with 3-year lock-in and potential for higher returns than traditional options</p>
               </div>
               <div>
                 <Label htmlFor="nps">
@@ -223,6 +225,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({ onSubmit, isLoading }) => {
                   {...register('investments.nps', { valueAsNumber: true })}
                   placeholder="e.g., 50000"
                 />
+                <p className="text-xs text-gray-500 mt-1">Government pension scheme offering additional tax deduction of ₹50,000 beyond 80C limit</p>
               </div>
               <div>
                 <Label htmlFor="other">
@@ -237,6 +240,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({ onSubmit, isLoading }) => {
                   {...register('investments.other', { valueAsNumber: true })}
                   placeholder="e.g., 25000"
                 />
+                <p className="text-xs text-gray-500 mt-1">NSC, tax-saving FDs, life insurance premiums, home loan principal payments, etc.</p>
               </div>
             </div>
           </CardContent>
