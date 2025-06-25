@@ -1,9 +1,8 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { PolicySuggestion } from '@/pages/Index';
-import { ExternalLink, BookOpen } from 'lucide-react';
 
 interface SuggestedPoliciesProps {
   suggestions: PolicySuggestion[];
@@ -22,16 +21,6 @@ const SuggestedPolicies: React.FC<SuggestedPoliciesProps> = ({ suggestions }) =>
         return 'bg-orange-100 text-orange-800';
       default:
         return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const handleLearnMore = (suggestion: PolicySuggestion) => {
-    if (suggestion.officialLink) {
-      window.open(suggestion.officialLink, '_blank', 'noopener,noreferrer');
-    } else {
-      // Fallback if no official link is provided
-      console.log(`Opening detailed information for suggestion: ${suggestion.id}`);
-      alert('Official link not available for this scheme. Please search online for more details.');
     }
   };
 
@@ -79,27 +68,6 @@ const SuggestedPolicies: React.FC<SuggestedPoliciesProps> = ({ suggestions }) =>
                   <h4 className="font-medium text-amber-900 text-sm mb-1">Eligibility:</h4>
                   <p className="text-amber-800 text-xs">{suggestion.eligibility}</p>
                 </div>
-              )}
-            </div>
-
-            <div className="flex gap-2 pt-2">
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={() => handleLearnMore(suggestion)}
-                className="flex-1"
-              >
-                <BookOpen className="h-3 w-3 mr-1" />
-                Learn More
-              </Button>
-              {suggestion.officialLink && (
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  onClick={() => window.open(suggestion.officialLink, '_blank', 'noopener,noreferrer')}
-                >
-                  <ExternalLink className="h-3 w-3" />
-                </Button>
               )}
             </div>
           </CardContent>
