@@ -1,73 +1,91 @@
-# Welcome to your Lovable project
+# 💼 Law2Ledger – AI-Powered Public Policy & Tax Assistant 🇮🇳
 
-## Project info
+**Law2Ledger** is an AI-powered web platform designed to help Indian citizens understand government policies and optimize their tax planning.  
+Simply enter your income and investment details — Law2Ledger will do the rest.
 
-**URL**: https://lovable.dev/projects/27b40cc8-5286-4404-9d93-e6ef30634ca5
+🔗 **Live App:** [https://law2-ledger.vercel.app](https://law2-ledger.vercel.app)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+✅ **Smart Tax Estimator**  
+- Enter salary and deductions (PPF, ELSS, NPS, etc.)  
+- Get a clear breakdown: Gross → Deductions → Net Tax
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/27b40cc8-5286-4404-9d93-e6ef30634ca5) and start prompting.
+✅ **AI-Powered Policy Matching**  
+- Recommends Indian government schemes and tax-saving policies relevant to your profile  
+- Explains how much you can save, and under which sections
 
-Changes made via Lovable will be committed automatically to this repo.
+✅ **Plain English Explanations**  
+- Every tax term and section is explained in user-friendly language  
+- Descriptions for investment options (PPF, ELSS, NPS, etc.)
 
-**Use your preferred IDE**
+✅ **Export Reports**  
+- View detailed summaries of recommendations and breakdowns  
+- Export your report for recordkeeping or review
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧠 How It Works
 
-Follow these steps:
+1. **User enters:**
+   - Annual income
+   - Current investments (PPF, ELSS, NPS, etc.)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **AI engine analyzes data:**
+   - Matches eligible tax deductions under Indian tax laws
+   - Finds relevant government policies
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. **Output:**
+   - Personalized recommendations
+   - Tax saving summary
+   - Policy explanations with links
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🚀 Getting Started (For Developers)
+
+### 📦 Prerequisites
+- Node.js 18+
+- npm
+
+### 🛠 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/law2ledger.git
+cd law2ledger
+
+# Install dependencies
+npm install
+
+# Start local dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🌐 Tech Stack
 
-**Use GitHub Codespaces**
+- **Frontend**: React + TypeScript + Tailwind CSS  
+- **Build Tool**: Vite  
+- **AI Engine**: OpenAI API (via Lovable platform)  
+- **Styling**: Tailwind + Chart.js  
+- **Deployment**: Vercel  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 👤 About Me
 
-This project is built with:
+Hi! I'm **Jhansi Challa**, a software developer passionate about building impactful web applications.  
+This project was created to simplify tax and policy awareness for everyday Indian citizens using modern AI.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- 💼 LinkedIn: [linkedin.com/in/jhansi-challa](https://linkedin.com/in/jhansi-challa)
+- 📧 Email: jhansichalla26@gmail.com
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/27b40cc8-5286-4404-9d93-e6ef30634ca5) and click on Share -> Publish.
+## 📄 License
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is open source and available under the [MIT License](LICENSE).
