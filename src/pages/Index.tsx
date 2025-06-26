@@ -270,13 +270,26 @@ Note: This summary is for informational purposes only. Please consult a tax advi
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2 flex items-center justify-center gap-3">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
             <Calculator className="h-8 w-8 text-blue-600" />
             Law2Ledger
           </h1>
-          <p className="text-lg text-gray-600">
-            Smart Tax Planning & Policy Suggestions Dashboard
-          </p>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 mb-4">
+              <strong>Law2Ledger is an AI-powered web platform that helps Indian citizens make smarter financial decisions.</strong>
+            </p>
+            <p className="text-base text-gray-600 mb-2">
+              Just enter your income and investment details, and Law2Ledger will:
+            </p>
+            <ul className="text-base text-gray-600 space-y-1 text-left max-w-2xl mx-auto">
+              <li>• Recommend the best government policies and tax-saving schemes tailored to you</li>
+              <li>• Explain how much you can save under each section</li>
+              <li>• Provide a breakdown of your taxable income and potential deductions</li>
+            </ul>
+            <p className="text-base text-gray-700 mt-4">
+              Whether you're a salaried employee, self-employed, or a first-time investor, <strong>Law2Ledger gives you policy clarity in plain English — no jargon, no confusion.</strong>
+            </p>
+          </div>
         </div>
 
         {/* Navigation Tabs */}

@@ -181,66 +181,69 @@ const ProfileForm: React.FC<ProfileFormProps> = ({ onSubmit, isLoading }) => {
             <p className="text-sm text-gray-600">Enter your existing investments to get personalized tax-saving suggestions</p>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <Label htmlFor="ppf">
-                  <InvestmentTooltip 
-                    title="PPF (₹)" 
-                    description="Public Provident Fund - A 15-year tax-saving investment with EEE benefits. Maximum contribution: ₹1.5 lakh per year. Returns are tax-free."
-                  />
-                </Label>
+                <Label htmlFor="ppf">PPF (₹)</Label>
                 <Input
                   id="ppf"
                   type="number"
                   {...register('investments.ppf', { valueAsNumber: true })}
                   placeholder="e.g., 150000"
                 />
-                <p className="text-xs text-gray-500 mt-1">15-year investment scheme with tax benefits on contribution, interest, and withdrawal</p>
+                <div className="mt-2 p-3 bg-blue-50 rounded-md">
+                  <p className="text-sm text-blue-900 font-medium mb-1">PPF (Public Provident Fund):</p>
+                  <p className="text-xs text-blue-800 leading-relaxed">
+                    The PPF is a government-backed savings account where you can deposit money every year and earn guaranteed interest (typically 7–8%). It's completely tax-free, and you can deduct up to ₹1.5 lakh per year from your taxable income under Section 80C. The lock-in period is 15 years, making it great for long-term savings like retirement or your child's future.
+                  </p>
+                </div>
               </div>
+
               <div>
-                <Label htmlFor="elss">
-                  <InvestmentTooltip 
-                    title="ELSS (₹)" 
-                    description="Equity Linked Savings Scheme - Mutual funds with 3-year lock-in period. Eligible for Section 80C deduction up to ₹1.5 lakh."
-                  />
-                </Label>
+                <Label htmlFor="elss">ELSS (₹)</Label>
                 <Input
                   id="elss"
                   type="number"
                   {...register('investments.elss', { valueAsNumber: true })}
                   placeholder="e.g., 50000"
                 />
-                <p className="text-xs text-gray-500 mt-1">Equity mutual funds with 3-year lock-in and potential for higher returns than traditional options</p>
+                <div className="mt-2 p-3 bg-green-50 rounded-md">
+                  <p className="text-sm text-green-900 font-medium mb-1">ELSS (Equity Linked Saving Scheme):</p>
+                  <p className="text-xs text-green-800 leading-relaxed">
+                    ELSS is a mutual fund that invests in the stock market and also helps you save tax under Section 80C (up to ₹1.5 lakh per year). It has the shortest lock-in among all tax-saving options — just 3 years. While it's market-linked (returns may vary), it often gives higher returns than fixed deposits or PPF over the long term. Great for people who are comfortable with some risk and want better returns.
+                  </p>
+                </div>
               </div>
+
               <div>
-                <Label htmlFor="nps">
-                  <InvestmentTooltip 
-                    title="NPS (₹)" 
-                    description="National Pension System - Retirement savings with additional ₹50,000 deduction under Section 80CCD(1B), over and above Section 80C limit."
-                  />
-                </Label>
+                <Label htmlFor="nps">NPS (₹)</Label>
                 <Input
                   id="nps"
                   type="number"
                   {...register('investments.nps', { valueAsNumber: true })}
                   placeholder="e.g., 50000"
                 />
-                <p className="text-xs text-gray-500 mt-1">Government pension scheme offering additional tax deduction of ₹50,000 beyond 80C limit</p>
+                <div className="mt-2 p-3 bg-purple-50 rounded-md">
+                  <p className="text-sm text-purple-900 font-medium mb-1">NPS (National Pension System):</p>
+                  <p className="text-xs text-purple-800 leading-relaxed">
+                    NPS is a retirement savings scheme run by the government. You invest money regularly, which is split between debt and equity (you can choose the mix). You can get up to ₹50,000 extra tax benefit in addition to Section 80C under Section 80CCD(1B). You can withdraw only after age 60, so it's ideal for people looking to build a secure retirement fund.
+                  </p>
+                </div>
               </div>
+
               <div>
-                <Label htmlFor="other">
-                  <InvestmentTooltip 
-                    title="Other Investments (₹)" 
-                    description="Other 80C investments like NSC, tax-saving FDs, life insurance premiums, home loan principal, children's tuition fees, etc."
-                  />
-                </Label>
+                <Label htmlFor="other">Other Investments (₹)</Label>
                 <Input
                   id="other"
                   type="number"
                   {...register('investments.other', { valueAsNumber: true })}
                   placeholder="e.g., 25000"
                 />
-                <p className="text-xs text-gray-500 mt-1">NSC, tax-saving FDs, life insurance premiums, home loan principal payments, etc.</p>
+                <div className="mt-2 p-3 bg-orange-50 rounded-md">
+                  <p className="text-sm text-orange-900 font-medium mb-1">Other Investments:</p>
+                  <p className="text-xs text-orange-800 leading-relaxed">
+                    This includes a variety of tax-saving tools like: 5-year Fixed Deposits (from banks, with tax benefits), ULIPs (insurance + investment combo plans), Sukanya Samriddhi Yojana (for girl child savings), Senior Citizen Saving Scheme (SCSS) (for those above 60). These are all eligible for deductions under Section 80C and are ideal based on your goals like education, health, or retirement.
+                  </p>
+                </div>
               </div>
             </div>
           </CardContent>
